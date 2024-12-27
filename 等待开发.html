@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - 正在维护或等待开发中</title>
+    <style>
+        /* 全局样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;/* 整个页面高度 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            position: relative;
+        }
+
+        /* 404 样式 */
+        .error-code {
+            font-size: 15vw;
+            color: #ff4d4d;
+            margin: 0;
+            line-height: 1;
+        }
+
+        /* 描述文字样式 */
+        .message {
+    font-size: 3vw;
+    color: #333333;
+    margin-top: 20px;
+    margin-bottom: -25px; /* 新增的下边距 */
+}
+        }
+
+        /* 底部注释样式 */
+        .footer-comment {
+            font-size: 1.5vw;
+            color: #555555;
+            margin-top: 40px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            .error-code {
+                font-size: 20vw;
+            }
+
+            .message {
+                font-size: 9vw;
+                margin-top: 10px;
+            }
+
+            .footer-comment {
+                font-size: 4vw;
+                margin-top: 20px;
+            }
+        }
+
+        /* 底部黑色矩形样式 */
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px 0;
+            font-size: 1.2vw;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* 响应式底部调整 */
+        @media (max-width: 600px)/* 更改底部字体大小 */ {
+            footer {
+                font-size: 2.5vw;
+                padding: 1px 0;/* 更改底部模块距离字体的高度 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="error-code">404</h1>
+        <p class="message">正在维护或等待开发中</p>
+        <p class="footer-comment">Under maintenance or waiting for development</p>
+    </div>
+
+    <footer>
+        <p>版权©梁镇浩 2024</p>
+        <p>联系方式：3628529838@qq.com</p>
+        <p>禁止用于非法用途，违者必究！</p>
+    </footer>
+
+</body>
+</html>
