@@ -21,7 +21,8 @@
             --footer-height: 40px; 
             --footer-bg-color: #FFFFFF; 
             --footer-text-color: white; 
-            --body-bg-color: linear-gradient(to bottom, #e0f7fa, white); 
+            --body-bg-color: url('首页背景.png') no-repeat center center fixed; 
+            --body-bg-size: cover; 
             --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             --top-rectangle-bg-color: white; 
             --top-rectangle-border-radius: 15px; 
@@ -50,6 +51,7 @@
             justify-content: flex-start; 
             align-items: center;
             background: var(--body-bg-color);
+            background-size: var(--body-bg-size); /* 确保背景覆盖整个屏幕 */
             font-family: var(--font-family);
             color: var(--button-text-color);
         }
@@ -206,7 +208,7 @@
 
         <!-- 第五行按钮 -->
         <div class="button-row button-row-5">
-            <a href="https://news.cctv.com/mobile/?sid_for_share=99125_3" class="button">每日新闻</a>
+            <a href="" class="button">每日新闻</a>
             <a href="作业考勤.html" class="button">作业考勤</a>
         </div>
 
