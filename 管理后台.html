@@ -6,16 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>管理员后台登录</title>
     <style>
-        .all {
-            width: 400px;
-            box-shadow: -5px 5px 15px rgba(210, 210, 210, 0.9);
-            margin: 100px auto;
-            display: flex;
-            border-radius: 20px;
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100%;
             background-image: url('管理员登录背景.png'); /* 修改这里 */
             background-size: cover; /* 根据需要调整大小 */
             background-repeat: no-repeat; /* 防止重复 */
             background-position: center center; /* 居中显示 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .all {
+            width: 400px;
+            box-shadow: -5px 5px 15px rgba(210, 210, 210, 0.9);
+            margin: 0 auto; /* 居中 */
+            display: flex;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
             height: 350px;
         }
         .log {
@@ -132,12 +142,12 @@
         <div class="reg">
             <div class="reg_1">
                 <h2>没有账号？</h2>
-                <p>立即创建加入我们吧，和我们一起开启旅程吧</p>
+                <p>想注册账号？那你慢慢想吧，这玩意儿没得注册！</p>
                 <a href=".等待开发.html">
-                    <button type="button" class="sig">没有没有呗</button>
+                    <button type="button" class="sig">休想注册</button>
                 </a>
             </div>
         </div>
     </div>
 </body>
-</html>
+</html> 
