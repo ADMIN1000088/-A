@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>此科目作业参考答案？</title>
+    <!-- 引入Google字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 全局样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* 图片样式 */
+        .image-container {
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 240px;
+            height: 240px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 文本样式 */
+        .text-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .text-container h1 {
+            font-size: 1.5em;
+            margin: 0;
+            color: #333;
+        }
+
+        .text-container p {
+            font-size: 1.2em;
+            color: #555;
+            margin: 10px 0 0 0;
+        }
+
+        /* 按钮样式 */
+        .return-button {
+            position: absolute;
+            bottom: 76.88888px; /* 修改这里 */
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .return-button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            .image-container img {
+                width: 180px;
+                height: 180px;
+            }
+
+            .text-container h1 {
+                font-size: 1.2em;
+            }
+
+            .text-container p {
+                font-size: 1em;
+            }
+
+            .return-button {
+                padding: 12px 25px;
+                font-size: 0.9em;
+                bottom: 120px; /* 移动设备上的底部距离 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="呵呵.gfi" alt="科目图片">
+    </div>
+
+    <div class="text-container">
+        <h1>正在查找此科目的参考答案？</h1>
+        <p>这一科好像没有布置过作业吧😥</p>
+    </div>
+
+    <button class="return-button" onclick="goBack()">返回</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>
