@@ -21,8 +21,7 @@
             --footer-height: 40px; 
             --footer-bg-color: #FFFFFF; 
             --footer-text-color: white; 
-            --body-bg-color: url('首页背景.png') no-repeat center center fixed; 
-            --body-bg-size: cover; 
+            --body-bg-color: linear-gradient(to bottom, #e0f7fa, white); 
             --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             --top-rectangle-bg-color: white; 
             --top-rectangle-border-radius: 15px; 
@@ -51,12 +50,11 @@
             justify-content: flex-start; 
             align-items: center;
             background: var(--body-bg-color);
-            background-size: var(--body-bg-size); /* 确保背景覆盖整个屏幕 */
             font-family: var(--font-family);
             color: var(--button-text-color);
         }
 
-       .top-rectangle {
+      .top-rectangle {
             width: calc(100% - 2 * var(--top-rectangle-left-right-reduction));
             max-width: var(--container-max-width);
             background-color: var(--top-rectangle-bg-color);
@@ -69,17 +67,17 @@
             top: var(--top-rectangle-top);
         }
 
-       .current-time {
+      .current-time {
             font-size: 1.2rem;
             margin-bottom: 20px;
         }
 
-       .countdown {
+      .countdown {
             font-size: 1.2rem;
             margin-bottom: 10px;
         }
 
-       .button-container {
+      .button-container {
             width: 100%;
             max-width: var(--container-max-width);
             padding: var(--button-margin);
@@ -90,7 +88,7 @@
             align-items: center;
         }
 
-       .button-row {
+      .button-row {
             width: 100%;
             display: flex;
             justify-content: space-between; 
@@ -98,7 +96,7 @@
             gap: var(--button-margin); 
         }
 
-       .button {
+      .button {
             width: var(--button-width);
             height: var(--button-height);
             background-color: var(--button-bg-color);
@@ -114,37 +112,37 @@
             border-radius: 8px;
         }
 
-       .button:hover {
+      .button:hover {
             background-color: #e0e0e0;
             border-color: #bdbdbd;
         }
 
-       .button:active {
+      .button:active {
             background-color: #c8c8c8;
         }
 
-       .button-row-1 {
+      .button-row-1 {
             justify-content: center;
         }
 
-       .button-row-2,
-       .button-row-3,
-       .button-row-4,
-       .button-row-5,
-       .button-row-6 {
+      .button-row-2,
+      .button-row-3,
+      .button-row-4,
+      .button-row-5,
+      .button-row-6 {
             justify-content: space-between;
         }
 
-       .button-row-1.button {
+      .button-row-1.button {
             width: 90%;
             margin: 0 auto;
         }
 
-       .button-row-2.button,
-       .button-row-3.button,
-       .button-row-4.button,
-       .button-row-5.button,
-       .button-row-6.button {
+      .button-row-2.button,
+      .button-row-3.button,
+      .button-row-4.button,
+      .button-row-5.button,
+      .button-row-6.button {
             width: 45%;
             margin: 0;
         }
@@ -159,7 +157,7 @@
             height: var(--footer-height); 
         }
 
-       .footer-rectangle {
+      .footer-rectangle {
             width: 100%;
             max-width: var(--container-max-width);
             background-color: black;
@@ -208,14 +206,14 @@
 
         <!-- 第五行按钮 -->
         <div class="button-row button-row-5">
-            <a href="https://news.cctv.com/mobile/?sid_for_share=99125_3" class="button">每日新闻</a>
-            <a href="作业考勤.html" class="button">作业考勤</a>
+            <a href="等待开发.html" class="button">等待开发...</a>
+            <a href="等待开发.html" class="button">等待开发...</a>
         </div>
 
         <!-- 第六行按钮 -->
         <div class="button-row button-row-6">
             <a href="课外知识.html" class="button">课外知识</a>
-            <a href="管理后台.html" class="button">管理后台</a>
+            <a href="等待开发.html" class="button">等待开发...</a>
         </div>
     </div>
 
@@ -254,12 +252,16 @@
             const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-            if (months < 1) {
-                months = 0;
+            if (diff <= 0) {
+                document.getElementById('countdown').textContent = "新年快乐！在新的一年中计算机242祝大家平安喜樂";
+                document.getElementById('countdown-label').style.display = "none"; 
+            } else {
+                if (months < 1) {
+                    months = 0;
+                }
+                const formattedCountdown = `${months}个月${days}天${hours}小时${minutes}分钟${seconds}秒`;
+                document.getElementById('countdown').textContent = formattedCountdown;
             }
-
-            const formattedCountdown = `${months}个月${days}天${hours}小时${minutes}分钟${seconds}秒`;
-            document.getElementById('countdown').textContent = formattedCountdown;
         }
 
         updateCountdown();
