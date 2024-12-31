@@ -21,7 +21,8 @@
             --footer-height: 40px; 
             --footer-bg-color: #FFFFFF; 
             --footer-text-color: white; 
-            --body-bg-color: linear-gradient(to bottom, #e0f7fa, white); 
+            --body-bg-color: linear-gradient(to bottom, #e0f7fa, white), url('首页背景.png') no-repeat center center fixed; 
+            --body-bg-size: cover; 
             --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             --top-rectangle-bg-color: white; 
             --top-rectangle-border-radius: 15px; 
@@ -50,6 +51,7 @@
             justify-content: flex-start; 
             align-items: center;
             background: var(--body-bg-color);
+            background-size: var(--body-bg-size); 
             font-family: var(--font-family);
             color: var(--button-text-color);
         }
@@ -206,14 +208,14 @@
 
         <!-- 第五行按钮 -->
         <div class="button-row button-row-5">
-            <a href="等待开发.html" class="button">等待开发...</a>
-            <a href="等待开发.html" class="button">等待开发...</a>
+            <a href="https://news.cctv.com/mobile/?sid_for_share=99125_3" class="button">每日新闻</a>
+            <a href="作业考勤.html" class="button">作业考勤</a>
         </div>
 
         <!-- 第六行按钮 -->
         <div class="button-row button-row-6">
             <a href="课外知识.html" class="button">课外知识</a>
-            <a href="等待开发.html" class="button">等待开发...</a>
+            <a href="管理后台.html" class="button">管理后台</a>
         </div>
     </div>
 
@@ -253,7 +255,7 @@
             const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
             if (diff <= 0) {
-                document.getElementById('countdown').textContent = "新年快乐！在新的一年中计算机242祝大家平安喜樂";
+                document.getElementById('countdown').textContent = "新年快乐！在新的一年里计算机242祝大家平安喜樂";
                 document.getElementById('countdown-label').style.display = "none"; 
             } else {
                 if (months < 1) {
